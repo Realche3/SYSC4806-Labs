@@ -1,0 +1,42 @@
+### 1. Create an address book
+POST http://localhost:8080/addressBooks
+Content-Type: application/json
+
+{}
+
+### 2a. Create buddy 1
+POST http://localhost:8080/buddies
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "phoneNumber": "613-555-1234",
+  "email": "alice@example.com",
+  "address": "123 Main St"
+}
+
+### 2b. Create buddy 2
+POST http://localhost:8080/buddies
+Content-Type: application/json
+
+{
+  "name": "Mohamed Cherif",
+  "phoneNumber": "613-333-2233",
+  "email": "mbah@example.com",
+  "address": "122 Great-Lakes St"
+}
+
+### 3a. Add buddy 1 to address book 1
+PUT http://localhost:8080/buddies/1/addressBook
+Content-Type: text/uri-list
+
+http://localhost:8080/addressBooks/1
+
+### 3b. Add buddy 2 to address book 1
+PUT http://localhost:8080/buddies/2/addressBook
+Content-Type: text/uri-list
+
+http://localhost:8080/addressBooks/1
+
+### 4. Verify
+GET http://localhost:8080/addressBooks/1/buddies
