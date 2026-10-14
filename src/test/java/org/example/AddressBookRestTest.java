@@ -66,7 +66,7 @@ class AddressBookRestTest {
                 .exchange()
                 .expectStatus().isNoContent();
 
-        // GET: the book's buddies should now include Zed (same as request 4)
+        // GET: the book's buddies should now include Mohamed (same as request 4)
         client.get()
                 .uri("/addressBooks/" + book.getId() + "/buddies")
                 .exchange()
