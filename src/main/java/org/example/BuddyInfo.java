@@ -17,6 +17,7 @@ public class BuddyInfo {
     private String phoneNumber;
     private String email;
     private String address;
+    private String gender;
 
     public BuddyInfo() {
 
@@ -42,6 +43,9 @@ public class BuddyInfo {
 
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
+
+    public String getGender() { return gender; }
+    public void setGender(String gender) { this.gender = gender; }
 
     @Override
     public String toString() {

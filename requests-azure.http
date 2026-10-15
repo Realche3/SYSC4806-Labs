@@ -1,0 +1,41 @@
+@host = https://mohamed-cherif-addressbook-4806-f6e4gdeqhegzbudn.westus-01.azurewebsites.net
+
+### 1. Create an address book
+POST {{host}}/addressBooks
+Content-Type: application/json
+
+{}
+
+### 2a. Create buddy 1
+POST {{host}}/buddies
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "phoneNumber": "613-555-1234",
+  "email": "alice@example.com",
+  "address": "123 Main St"
+}
+
+### 2b. Create buddy 2
+POST {{host}}/buddies
+Content-Type: application/json
+
+{
+  "name": "Mohamed Cherif",
+  "phoneNumber": "613-333-2233",
+  "email": "mbah@example.com",
+  "address": "122 Great-Lakes St"
+}
+
+### 3a. Add buddy 1 to address book 1
+PUT {{host}}/buddies/1/addressBook
+Content-Type: text/uri-list
+
+{{host}}/addressBooks/1
+
+### 3b. Add buddy 2 to address book 1
+PUT {{host}}/buddies/2/addressBook
+Content-Type: text/uri-list
+
+{{host}}/addressBooks/1

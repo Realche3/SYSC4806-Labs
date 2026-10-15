@@ -74,4 +74,18 @@ class AddressBookRestTest {
                 .expectBody(String.class)
                 .value(body -> assertTrue(body.contains("Mohamed Cherif")));
     }
+
+    @Test
+    void buddyGenderIsReturned() {
+        BuddyInfo buddy = new BuddyInfo("Sarah", "613-111-2222", "sarah@example.com", "5 Test Ave");
+        buddy.setGender("Female");
+        BuddyInfo saved = buddyRepo.save(buddy);
+
+        client.get()
+                .uri("/buddies/" + saved.getId())
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody(String.class)
+                .value(body -> assertTrue(body.contains("Female")));
+    }
 }
