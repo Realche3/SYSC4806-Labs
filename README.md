@@ -13,3 +13,8 @@ The app uses an in-memory database, so it starts empty. Run the requests in `req
 against the Azure URL, then open:
 
 https://mohamed-cherif-addressbook-4806-f6e4gdeqhegzbudn.westus-01.azurewebsites.net/view/addressbook/1
+
+> **Note for TAs:** Chrome may show a "Dangerous" / "Not secure" warning on this site.
+> This is my own course project (a plain Spring Boot app on a new azurewebsites.net address),
+> and it contains no login or personal data, so it should be safe to continue.
+> If your browser blocks it, click "Details" and then "Visit this site", or open it in another browser such as Edge or Firefox.
