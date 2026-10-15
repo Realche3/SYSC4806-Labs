@@ -14,7 +14,8 @@ Content-Type: application/json
   "name": "Alice",
   "phoneNumber": "613-555-1234",
   "email": "alice@example.com",
-  "address": "123 Main St"
+  "address": "123 Main St",
+  "gender": "female"
 }
 
 ### 2b. Create buddy 2
@@ -25,7 +26,8 @@ Content-Type: application/json
   "name": "Mohamed Cherif",
   "phoneNumber": "613-333-2233",
   "email": "mbah@example.com",
-  "address": "122 Great-Lakes St"
+  "address": "122 Great-Lakes St",
+  "gender": "male"
 }
 
 ### 3a. Add buddy 1 to address book 1

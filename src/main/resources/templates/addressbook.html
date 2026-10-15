@@ -4,7 +4,7 @@
 <body>
 <h1>Address Book #<span th:text="${book.id}"></span></h1>
 <table border="1">
-    <tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th></tr>
+    <tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Gender</th></tr>
     <tr th:each="buddy : ${book.buddies}">
         <td th:text="${buddy.name}"></td>
         <td th:text="${buddy.phoneNumber}"></td>
